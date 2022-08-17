@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import { Transactions } from "../constants";
 import {
@@ -13,9 +13,8 @@ export default function RenderTranscation() {
   return (
     <View className="mx-4">
       {Transactions.map((item, index) => {
-        console.log("item.vectorIcon", item.vectorIcon);
         return (
-          <View
+          <TouchableOpacity activeOpacity={0.8} 
             className="my-2 flex flex-row py-3 items-center justify-between"
             key={index}
           >
@@ -59,7 +58,7 @@ export default function RenderTranscation() {
                 {item.amount}
               </Text>
             </View>
-          </View>
+          </TouchableOpacity>
         );
       })}
     </View>

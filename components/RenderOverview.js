@@ -1,4 +1,4 @@
-import { View, Text, Dimensions, FlatList } from "react-native";
+import { View, Text, Dimensions, FlatList, TouchableOpacity } from "react-native";
 import React from "react";
 import { Overview } from "../constants";
 import { Feather } from "@expo/vector-icons";
@@ -24,7 +24,7 @@ export default function RenderOverview() {
 
 const Card = ({ item }) => {
   return (
-    <View className="bg-neutral-800 rounded-lg w-56 shadow-lg mx-1 py-5 px-4">
+    <TouchableOpacity activeOpacity={0.8} className="bg-neutral-800 rounded-lg w-56 shadow-lg mx-1 py-5 px-4">
       <Text className="text-gray-300 text-lg font-bold capitalize tracking-wider">
         {item.label}
       </Text>
@@ -48,6 +48,6 @@ const Card = ({ item }) => {
         </View>
         <Text className={`ml-1 text-sm text-gray-300`}>{item.date}</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };

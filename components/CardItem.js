@@ -10,7 +10,7 @@ export default function CardItem({ item, index }) {
           <TouchableOpacity activeOpacity={0.8} className={`py-4 px-2 justify-center bg-neutral-800 rounded-lg mx-2 h-44`}>
           <Ionicons name="add" color={"#fff"} size={30} />
           </TouchableOpacity>
-          <View className={`py-2 px-5 bg-green-200 w-72 rounded-lg mx-1 h-44`}>
+          <View className={`py-2 px-5 bg-teal-200 w-72 rounded-lg mx-1 h-44`}>
             <View className="flex flex-row items-center justify-between">
               <Text className="font-bold capitalize text-base">
                 {item.type}

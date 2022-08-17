@@ -72,7 +72,7 @@ export const Transactions = [
   },
   {
     title: "spotify",
-    amount: "-$22,356.00",
+    amount: "$22,356.00",
     type: "inc",
     date: "18 september 2022 at 4:20am",
     vectorName: "spotify",
@@ -80,7 +80,7 @@ export const Transactions = [
   },
   {
     title: "google",
-    amount: "$100.00",
+    amount: "$54,100.00",
     type: "exp",
     date: "20 september 2022 at 4:20am",
     vectorName: "google",
@@ -88,7 +88,7 @@ export const Transactions = [
   },
   {
     title: "twitter",
-    amount: "$100.00",
+    amount: "$788,800.00",
     type: "inc",
     date: "18 september 2022 at 4:20am",
     vectorName: "google",

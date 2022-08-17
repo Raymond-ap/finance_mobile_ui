@@ -5,7 +5,7 @@ import {
   TouchableOpacity,
   ScrollView,
   TextInput,
-  Dimensions
+  Dimensions,
 } from "react-native";
 import React from "react";
 import {
@@ -17,7 +17,6 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import { Transactions } from "../../constants";
-
 
 export default function TransactionDetail({ route }) {
   const item = route.params.item;
@@ -32,6 +31,20 @@ export default function TransactionDetail({ route }) {
     </SafeAreaView>
   );
 }
+
+const RenderChart = ({ amount }) => {
+  return (
+    <View className="px-4 my-3">
+      <Text className="text-gray-300 text-base mb-1 capitalize tracking-wider">
+        total expense
+      </Text>
+      <Text className="text-white text-xl font-bold capitalize tracking-widest">
+        {amount}
+      </Text>
+      <View className="my-3"></View>
+    </View>
+  );
+};
 
 const SearchItem = () => {
   return (
@@ -111,22 +124,6 @@ const TransactionHistory = () => {
             </TouchableOpacity>
           );
         })}
-      </View>
-    </View>
-  );
-};
-
-const RenderChart = ({ amount }) => {
-  return (
-    <View className="px-4 my-3">
-      <Text className="text-gray-300 text-base mb-1 capitalize tracking-wider">
-        total expense
-      </Text>
-      <Text className="text-white text-xl font-bold capitalize tracking-widest">
-        {amount}
-      </Text>
-      <View className="my-3">
-
       </View>
     </View>
   );

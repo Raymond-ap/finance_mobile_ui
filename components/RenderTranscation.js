@@ -8,13 +8,19 @@ import {
   Fontisto,
   FontAwesome5Brands,
 } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 export default function RenderTranscation() {
+  const navigation = useNavigation();
   return (
     <View className="mx-4">
       {Transactions.map((item, index) => {
         return (
-          <TouchableOpacity activeOpacity={0.8} 
+          <TouchableOpacity
+            onPress={() =>
+              navigation.navigate("TransactionDetail", { item: item })
+            }
+            activeOpacity={0.8}
             className="my-2 flex flex-row py-3 items-center justify-between"
             key={index}
           >

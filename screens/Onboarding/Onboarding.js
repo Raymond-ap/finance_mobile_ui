@@ -17,10 +17,10 @@ export default function Onboarding() {
         </Text>
         <TouchableOpacity
           onPress={() => navigation.navigate("Home")}
-          className="mt-10 w-full bg-green-100 py-4 justify-center items-center rounded-md shadow-md"
+          className="mt-10 w-full bg-green-100 py-4 justify-center items-center rounded-sm shadow-md"
           activeOpacity={0.8}
         >
-          <Text className="text-base capitalize tracking-wider ">
+          <Text className="text-base font-bold capitalize tracking-wider ">
             get started now
           </Text>
         </TouchableOpacity>

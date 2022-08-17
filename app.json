@@ -28,6 +28,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Finance mobile app ui with react native and tailwind css",
+    "githubUrl": "https://github.com/Raymond-ap/finance_mobile_ui"
   }
 }

@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   ScrollView,
   TextInput,
+  Dimensions
 } from "react-native";
 import React from "react";
 import {
@@ -16,6 +17,7 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import { Transactions } from "../../constants";
+
 
 export default function TransactionDetail({ route }) {
   const item = route.params.item;
@@ -36,7 +38,7 @@ const SearchItem = () => {
     <View className="flex px-5 flex-row items-center bg-neutral-800 rounded-full border border-neutral-50">
       <Ionicons name="search" color={"#e5e7eb"} size={18} />
       <TextInput
-        style={{ flex: 1 }}
+        style={{ flex: 1, color: "#e5e7eb" }}
         placeholder="Search your transaction here"
         placeholderTextColor={"#e5e7eb"}
         className="text-base w-full px-2 py-3"
@@ -123,6 +125,9 @@ const RenderChart = ({ amount }) => {
       <Text className="text-white text-xl font-bold capitalize tracking-widest">
         {amount}
       </Text>
+      <View className="my-3">
+
+      </View>
     </View>
   );
 };

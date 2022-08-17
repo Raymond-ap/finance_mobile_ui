@@ -41,7 +41,11 @@ const RenderChart = ({ amount }) => {
       <Text className="text-white text-xl font-bold capitalize tracking-widest">
         {amount}
       </Text>
-      <View className="my-3"></View>
+      <View className="my-3">
+        <Text className="text-white">
+          Yet to render chart here
+        </Text>
+      </View>
     </View>
   );
 };

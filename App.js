@@ -6,7 +6,7 @@ import { HomeScreen, Onboarding, TransactionDetail } from "./screens";
 
 const Stack = createNativeStackNavigator();
 
-export default function App() {
+const App = () => {
   return (
     <TailwindProvider>
       <NavigationContainer theme={DarkTheme}>
@@ -25,3 +25,5 @@ export default function App() {
     </TailwindProvider>
   );
 }
+
+export default App

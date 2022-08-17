@@ -13,6 +13,7 @@ import {
   RenderCardItem,
   FeaturedRow,
   RenderTranscation,
+  RenderOverview
 } from "../../components";
 
 export default function HomeScreen() {
@@ -21,7 +22,7 @@ export default function HomeScreen() {
       <Header />
       <ScrollView>
         <RenderCardItem />
-        {/* <FeaturedRow label={"overview"} /> */}
+        <FeaturedRow label={"overview"} render={<RenderOverview/>} />
         <FeaturedRow
           label={"latest transaction"}
           render={<RenderTranscation />}

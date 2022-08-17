@@ -1,4 +1,3 @@
-import { Fontisto, FontAwesome5Brands, FontAwesome } from "@expo/vector-icons";
 export const Cards = [
   {
     logo: require("./assets/images/visa_logo.png"),

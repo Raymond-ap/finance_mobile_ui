@@ -17,6 +17,9 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import { Transactions } from "../../constants";
+import { LineChart } from "react-native-chart-kit";
+
+const screenWidth = Dimensions.get("window").width;
 
 export default function TransactionDetail({ route }) {
   const item = route.params.item;
@@ -34,18 +37,63 @@ export default function TransactionDetail({ route }) {
 
 const RenderChart = ({ amount }) => {
   return (
-    <View className="px-4 my-3">
-      <Text className="text-gray-300 text-base mb-1 capitalize tracking-wider">
+    <View className="my-3">
+      <Text className="px-4 text-gray-300 text-base mb-1 capitalize tracking-wider">
         total expense
       </Text>
-      <Text className="text-white text-xl font-bold capitalize tracking-widest">
+      <Text className="px-4 text-white text-xl font-bold capitalize tracking-widest mb-5">
         {amount}
       </Text>
-      <View className="my-3">
-        <Text className="text-white">
-          Yet to render chart here
-        </Text>
-      </View>
+      <LineChart
+        data={{
+          labels: [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "oct",
+            "Nov",
+            "Dec",
+          ],
+          datasets: [
+            {
+              data: [
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+              ],
+            },
+          ],
+        }}
+        width={screenWidth}
+        height={220}
+        yAxisLabel="$"
+        yAxisInterval={1}
+        chartConfig={{
+          color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+          labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+          propsForBackgroundLines: {
+            strokeWidth: 0,
+          },
+        }}
+        withHorizontalLabels={false}
+        style={{ paddingRight: 0 }}
+        bezier
+      />
     </View>
   );
 };

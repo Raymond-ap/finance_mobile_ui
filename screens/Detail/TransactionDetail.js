@@ -89,6 +89,9 @@ const RenderChart = ({ amount }) => {
           propsForBackgroundLines: {
             strokeWidth: 0,
           },
+          propsForDots: {
+            stroke: "#ccfbf1",
+          },
         }}
         withHorizontalLabels={false}
         style={{ paddingRight: 0 }}
